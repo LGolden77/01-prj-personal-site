@@ -21,10 +21,15 @@ html {
 
 body {
 	margin: 0;
-	background-color: var(--cream);
+	background: linear-gradient(to bottom, #fff8f2 0%, #fffdfb 100%);
 	color: var(--text);
 	font-family: Georgia, "Times New Roman", serif;
 	line-height: 1.6;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 
 .container {
@@ -34,8 +39,11 @@ body {
 }
 
 .site-header {
-	background-color: var(--white);
+	background-color: rgba(255, 255, 255, 0.95);
 	border-bottom: 1px solid #ead5d5;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 }
 
 .header-content,
@@ -61,6 +69,7 @@ nav a {
 	font-size: 0.9rem;
 	font-weight: bold;
 	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 nav a:hover,
@@ -75,6 +84,11 @@ nav a:hover,
 
 .hero-content {
 	padding: 110px 0 120px;
+}
+
+.hero .container {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .eyebrow {
@@ -130,10 +144,13 @@ h3 {
 	font-family: Arial, sans-serif;
 	font-weight: bold;
 	text-decoration: none;
+	border-radius: 6px;
+	transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .button:hover {
 	background-color: var(--white);
+	transform: translateY(-1px);
 }
 
 .section {
@@ -162,6 +179,7 @@ h3 {
 .project-list {
 	display: flex;
 	gap: 22px;
+	align-items: stretch;
 }
 
 .about-item,
@@ -170,6 +188,8 @@ h3 {
 	padding: 26px;
 	background-color: var(--white);
 	border-top: 4px solid var(--blue);
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(101, 27, 36, 0.05);
 }
 
 .about-item p,
@@ -199,10 +219,11 @@ h3 {
 	font-size: 0.9rem;
 	font-weight: bold;
 	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 .contact-section {
-	background-color: var(--blue);
+	background: linear-gradient(135deg, var(--blue) 0%, #9a2a3a 100%);
 	color: var(--white);
 }
 
@@ -221,6 +242,7 @@ h3 {
 .button-light {
 	flex-shrink: 0;
 	background-color: var(--white);
+	border-radius: 6px;
 }
 
 footer {
@@ -228,6 +250,10 @@ footer {
 	color: #dce8eb;
 	font-family: Arial, sans-serif;
 	font-size: 0.85rem;
+}
+
+.footer-content {
+	padding: 28px 0;
 }
 
 /* On smaller screens, stack the content so it remains easy to read. */
@@ -257,6 +283,11 @@ footer {
 
 	h2 {
 		font-size: 1.9rem;
+	}
+
+	.project-card,
+	.about-item {
+		margin-bottom: 18px;
 	}
 
 	.about-item,
