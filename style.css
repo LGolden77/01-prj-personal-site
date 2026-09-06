@@ -1,1 +1,274 @@
-/* Add you CSS here */
+/* These variables make the main colors easy to change later. */
+:root {
+	--navy: #651b24;
+	--blue: #b23a48;
+	--blue-light: #f8e4e4;
+	--gold: #f2b35d;
+	--cream: #fff8f2;
+	--white: #ffffff;
+	--text: #352326;
+	--muted: #6f5b5e;
+}
+
+/* This keeps sizing predictable and removes the browser's default spacing. */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-color: var(--cream);
+	color: var(--text);
+	font-family: Georgia, "Times New Roman", serif;
+	line-height: 1.6;
+}
+
+.container {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.site-header {
+	background-color: var(--white);
+	border-bottom: 1px solid #ead5d5;
+}
+
+.header-content,
+.footer-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 20px 0;
+}
+
+.logo {
+	color: var(--navy);
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a {
+	margin-left: 18px;
+	color: var(--navy);
+	font-family: Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav a:hover,
+.project-card a:hover {
+	color: var(--gold);
+}
+
+.hero {
+	background-color: var(--navy);
+	color: var(--white);
+}
+
+.hero-content {
+	padding: 110px 0 120px;
+}
+
+.eyebrow {
+	margin: 0 0 10px;
+	color: var(--gold);
+	font-family: Arial, sans-serif;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	line-height: 1.2;
+}
+
+h1 {
+	max-width: 700px;
+	margin-bottom: 22px;
+	font-size: 3.5rem;
+}
+
+h2 {
+	max-width: 650px;
+	color: var(--navy);
+	font-size: 2.3rem;
+}
+
+h3 {
+	color: var(--navy);
+	font-size: 1.3rem;
+}
+
+.hero h1 {
+	color: var(--white);
+}
+
+.hero-text {
+	max-width: 590px;
+	margin-bottom: 30px;
+	color: #dce8eb;
+	font-size: 1.2rem;
+}
+
+.button {
+	display: inline-block;
+	padding: 13px 22px;
+	background-color: var(--gold);
+	color: var(--navy);
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: var(--white);
+}
+
+.section {
+	padding: 85px 0;
+}
+
+.section-intro {
+	max-width: 680px;
+	margin-bottom: 42px;
+	color: var(--muted);
+	font-size: 1.1rem;
+}
+
+.profile-photo {
+	display: block;
+	width: 260px;
+	height: 260px;
+	margin: 20px 0 28px;
+	border: 6px solid var(--white);
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: 52% 24%;
+}
+
+.about-list,
+.project-list {
+	display: flex;
+	gap: 22px;
+}
+
+.about-item,
+.project-card {
+	flex: 1;
+	padding: 26px;
+	background-color: var(--white);
+	border-top: 4px solid var(--blue);
+}
+
+.about-item p,
+.project-card p {
+	margin-bottom: 0;
+	color: var(--muted);
+}
+
+.projects-section {
+	background-color: var(--blue-light);
+}
+
+.project-number {
+	display: block;
+	margin-bottom: 25px;
+	color: var(--blue);
+	font-family: Arial, sans-serif;
+	font-size: 0.85rem;
+	font-weight: bold;
+}
+
+.project-card a {
+	display: inline-block;
+	margin-top: 20px;
+	color: var(--blue);
+	font-family: Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.contact-section {
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+.contact-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 70px 0;
+}
+
+.contact-section h2 {
+	color: var(--white);
+}
+
+.button-light {
+	flex-shrink: 0;
+	background-color: var(--white);
+}
+
+footer {
+	background-color: var(--navy);
+	color: #dce8eb;
+	font-family: Arial, sans-serif;
+	font-size: 0.85rem;
+}
+
+/* On smaller screens, stack the content so it remains easy to read. */
+@media (max-width: 700px) {
+	.header-content,
+	.contact-content,
+	.about-list,
+	.project-list {
+		display: block;
+	}
+
+	nav {
+		margin-top: 14px;
+	}
+
+	nav a {
+		margin: 0 16px 0 0;
+	}
+
+	.hero-content {
+		padding: 75px 0 85px;
+	}
+
+	h1 {
+		font-size: 2.6rem;
+	}
+
+	h2 {
+		font-size: 1.9rem;
+	}
+
+	.about-item,
+	.project-card {
+		margin-bottom: 22px;
+	}
+
+	.contact-content .button {
+		margin-top: 15px;
+	}
+
+	.footer-content {
+		display: block;
+	}
+}

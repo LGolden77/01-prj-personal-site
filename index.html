@@ -2,10 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latrel M. Golden | IT Student</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- The header contains the site title and simple navigation links. -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#home">Latrel M. Golden</a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- This is the first section visitors see. -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <p class="eyebrow">Web development student</p>
+        <h1>From Service to Software.</h1>
+        <p class="hero-text">
+          I am a former Army paratrooper learning the technology skills to begin a new career in IT.
+        </p>
+        <a class="button" href="#projects">See my projects</a>
+      </div>
+    </section>
+
+    <!-- The about section introduces the person behind the portfolio. -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow">A little about me</p>
+        <img class="profile-photo" src="img/me.jpg" alt="Portrait of Latrel M. Golden">
+        <h2>Experience, curiosity, and a fresh start</h2>
+        <p class="section-intro">
+          I was born on May 28, 1977. After serving as an Army paratrooper, I am bringing discipline,
+          teamwork, and problem-solving to my journey into IT technology. I am also a proud parent of two kids.
+        </p>
+
+        <div class="about-list">
+          <article class="about-item">
+            <h3>Army paratrooper</h3>
+            <p>Service taught me how to stay calm, work with a team, and keep moving toward a goal.</p>
+          </article>
+
+          <article class="about-item">
+            <h3>Learning IT</h3>
+            <p>I am starting with HTML and CSS and will continue building my web development skills.</p>
+          </article>
+
+          <article class="about-item">
+            <h3>Family first</h3>
+            <p>My two kids inspire me to keep learning, growing, and creating a better future.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add new skills here as you learn them. -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="eyebrow">What I am learning</p>
+        <h2>Skills for my IT journey</h2>
+        <p class="section-intro">These are the skills I am practicing now and plan to develop in my course.</p>
+
+        <div class="about-list">
+          <article class="about-item">
+            <h3>HTML</h3>
+            <p>Creating the structure and content of web pages.</p>
+          </article>
+
+          <article class="about-item">
+            <h3>CSS</h3>
+            <p>Styling pages with colors, spacing, and readable layouts.</p>
+          </article>
+
+          <article class="about-item">
+            <h3>Problem-solving</h3>
+            <p>Using patience, teamwork, and practice to solve technical challenges.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Replace these project examples with your real class projects. -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <p class="eyebrow">My work</p>
+        <h2>Projects I am building</h2>
+        <p class="section-intro">This space will grow as I learn new skills in my web development course.</p>
+
+        <div class="project-list">
+          <article class="project-card">
+            <span class="project-number">01</span>
+            <h3>Personal website</h3>
+            <p>A simple website that introduces me and showcases my progress.</p>
+            <a href="#contact">View project details</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">02</span>
+            <h3>Coming soon</h3>
+            <p>Add your next project here as you complete more course assignments.</p>
+            <a href="#contact">View project details</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">03</span>
+            <h3>Future idea</h3>
+            <p>Write a sentence about a website or app you would like to create.</p>
+            <a href="#contact">View project details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The contact section gives visitors a clear way to connect. -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-content">
+        <div>
+          <p class="eyebrow">Let’s connect</p>
+          <h2>Thanks for visiting my portfolio.</h2>
+          <p>Have a question or want to talk about a project? Send me an email.</p>
+        </div>
+        <!-- Replace this email address with your own email address. -->
+        <a class="button button-light" href="mailto:lgolden4@kent.edu">Email me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Latrel M. Golden</p>
+      <p>Made while learning HTML and CSS.</p>
+    </div>
+  </footer>
 </body>
 </html>
